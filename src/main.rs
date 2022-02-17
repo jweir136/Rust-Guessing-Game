@@ -1,4 +1,5 @@
 #![allow(non_snake_case)]
+#![allow(unused_variables)]
 
 mod slot_machine_utils;
 
@@ -35,6 +36,6 @@ fn play(mut coins: usize) {
 
 fn main() {
     greet();
-    let mut coins: usize = 10;
+    let coins: usize = 10;
     play(coins);
 }
