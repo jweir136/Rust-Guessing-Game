@@ -23,3 +23,12 @@ pub fn spin() -> SpinStatus {
         SpinStatus::Lose(slot1, slot2, slot3)
     }
 }
+
+impl fmt::Display for SpinStatus {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self {
+            SpinStatus::Win(slot) => write!(f, "You Won!\n{} {} {}", slot, slot, slot),
+            SpinStatus::Lose(slot1, slot2, slot3) => write!(f, "You Lose.\n{} {} {}", slot1, slot2, slot3)
+        }
+    }
+}
